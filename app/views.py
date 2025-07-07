@@ -43,8 +43,7 @@ def add_to_cart(request):
 		return redirect('/cart')
 	else:
 		return redirect('/cart')
-  # Below Code is used to return to same page
-  # return redirect(request.META['HTTP_REFERER'])
+
 
 @login_required
 def show_cart(request):
@@ -62,13 +61,14 @@ def show_cart(request):
 			for p in cart_product:
 				tempamount = (p.quantity * p.product.discounted_price)
 				amount += tempamount
-				totalamount = amount+shipping_amount
+				totalamount = amount+shipping_amount if amount > 0 else 0
 			return render(request, 'app/addtocart.html', {'carts':cart, 'amount':amount, 'totalamount':totalamount, 'totalitem':totalitem})
 		else:
 			return render(request, 'app/emptycart.html', {'totalitem':totalitem})
 	else:
 		return render(request, 'app/emptycart.html', {'totalitem':totalitem})
 
+@login_required
 def plus_cart(request):
 	if request.method == 'GET':
 		prod_id = request.GET['prod_id']
