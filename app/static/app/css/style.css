@@ -1,0 +1,40 @@
+.owl-carousel .item{
+ /* border: 1px solid black; */
+ font-size: 24px;
+ text-align: center;
+ margin-top: 20px;;
+}
+
+.owl-next{
+ float:right;
+}
+.owl-prev{
+ float:left;
+}
+.owl-prev span{
+ font-size: 24px;
+ font-weight: bold;
+}
+.owl-next span{
+ font-size: 24px;
+ font-weight: bold;
+}
+
+.logout-btn {
+  background: none;
+  border: 1px solid #dc3545; 
+  color: #dc3545;
+  padding: 5px 12px;
+  border-radius: 4px;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #dc3545;
+  color: white;
+  text-decoration: none;
+}
