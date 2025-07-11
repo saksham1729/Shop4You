@@ -42,3 +42,18 @@ ISSUES TO BE SOLVED>>>>>
 Multiple Address not getting saved.
 Serach bar not working. 
 Shipping charges not updating dynamically.
+
+ABOVE ISSUES RESOLVED on 11th July, 2025.
+
+Date: 11th July 2025
+
+   * Implemented dynamic cart using AJAX for plus, minus, and remove actions.
+   * Updated cart total and item count without page reload.
+   * Automatically removed cart item from DOM when quantity hit zero.
+   * Showed "You have no Product in Your Cart" message + image when all items removed.
+    Fixed:
+        ✅ Cart icon not updating
+        ✅ Duplicate empty-cart message
+        ✅ Image border (removed img-thumbnail)
+        ✅ Card boxes (used soft shadows instead)
+        ✅ Removed bottom border under "Cart Items"
