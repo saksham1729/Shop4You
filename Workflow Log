@@ -1,0 +1,44 @@
+Project Progress Summary (Django E-commerce)**
+
+[June 30, 2025]** Project setup (`shoppinglyx`), app created, static/media config, Bootstrap added
+[July 1, 2025]** Product model created (title, image, price, brand, category, etc.)
+[July 1, 2025]** Product listing by category: Topwear, Bottomwear, Mobile, Laptop
+[July 2, 2025]** Cart system added: add/remove/update items using AJAX
+[July 2, 2025]** Checkout page with address selection and cart summary
+[July 3, 2025]** Orders model and page with delivery progress bar
+[July 3, 2025]** User registration with Django `UserCreationForm`
+[July 4, 2025]** Email OTP-based user verification integrated via Mailtrap(Not Implemented)
+[July 4, 2025]** Password reset, change, login/logout setup
+[July 4, 2025]** Fixed layout issues on orders page with Bootstrap
+[July 5, 2025]** Image size inconsistencies resolved in product sliders and category listings
+[July 5, 2025]** Dynamic filtering by brand/price for Topwear, Bottomwear, etc.
+[July 5, 2025]** Added error handling for empty cart removal, invalid URLs, and 500s
+[July 6, 2025]** Created custom OTP registration flow with redirection and validation (Not Implemented)
+
+[July 7, 2025]
+
+* Implemented `add_to_cart` view with duplicate-check logic.
+* Added `show_cart` view to display products, total, and shipping.
+* Added `plus_cart` view with AJAX to increase quantity.
+* Introduced dynamic amount and total calculation on quantity update.
+
+[July 8, 2025]
+
+* Fixed `TabError` due to mixed tabs/spaces.
+* Updated `plus_cart` and `minus_cart` views to calculate and return:
+  * `quantity`
+  * `amount`, `totalamount`
+  * `totalitem` for cart icon
+* Updated JavaScript to:
+  * Send AJAX on `.plus-cart` click
+  * Update quantity, price, and cart icon without page refresh
+* Fixed `minus_cart` crash by replacing list with QuerySet (`filter()`).
+* Created `context_processors.py` to make `totalitem` globally available.
+* Registered context processor in `settings.py`.
+* Added styled `<hr>` tag to front page to visually separate rows/sections.
+
+
+ISSUES TO BE SOLVED>>>>>
+Multiple Address not getting saved.
+Serach bar not working. 
+Shipping charges not updating dynamically.
