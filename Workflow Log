@@ -45,7 +45,7 @@ Shipping charges not updating dynamically.
 
 ABOVE ISSUES RESOLVED on 11th July, 2025.
 
-Date: 11th July 2025
+[11th July 2025]
 
    * Implemented dynamic cart using AJAX for plus, minus, and remove actions.
    * Updated cart total and item count without page reload.
@@ -57,3 +57,25 @@ Date: 11th July 2025
         ✅ Image border (removed img-thumbnail)
         ✅ Card boxes (used soft shadows instead)
         ✅ Removed bottom border under "Cart Items"
+
+[14th July 2025]
+
+    ✅ Integrated Botpress chatbot embed script on website.
+
+    ✅ Modified chatbot styling to fit full container.
+
+    ✅ Confirmed chatbot loads on page and opens automatically.
+
+    ✅ Asked how to upgrade to a user-personalized chatbot.
+
+    ✅ Received step-by-step guide for:
+
+        Django backend API setup for user data.
+
+        Auth token/user ID passing via webchat.
+
+        Writing Botpress custom action to call API.
+
+        Secure communication (CORS, HTTPS).
+
+    🔜 Next: Implement Django API and Botpress action for order status retrieval.
