@@ -59,23 +59,24 @@ ABOVE ISSUES RESOLVED on 11th July, 2025.
         ✅ Removed bottom border under "Cart Items"
 
 [14th July 2025]
-
     ✅ Integrated Botpress chatbot embed script on website.
-
     ✅ Modified chatbot styling to fit full container.
-
     ✅ Confirmed chatbot loads on page and opens automatically.
-
     ✅ Asked how to upgrade to a user-personalized chatbot.
-
     ✅ Received step-by-step guide for:
-
         Django backend API setup for user data.
-
         Auth token/user ID passing via webchat.
-
         Writing Botpress custom action to call API.
-
         Secure communication (CORS, HTTPS).
 
-    🔜 Next: Implement Django API and Botpress action for order status retrieval.
+[15th July 2025]
+   * Added product location field to Product model
+   * Applied migrations to update database schema
+   * Implemented order tracking view using user and product coordinates
+   * Integrated Leaflet map in track_order.html to display delivery route
+   * Fixed NoReverseMatch error in orders.html by correcting URL arguments
+   * Created missing track_order.html template under correct path
+   * Added estimated delivery time (ETA) calculation in view
+   * Centered the map on the page using Bootstrap utilities
+   * Handled GeocoderUnavailable by considering increased timeout or fallback options
+   * Prepared for future enhancement with real-time tracking and status icons
