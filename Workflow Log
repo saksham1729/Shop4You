@@ -80,3 +80,11 @@ ABOVE ISSUES RESOLVED on 11th July, 2025.
    * Centered the map on the page using Bootstrap utilities
    * Handled GeocoderUnavailable by considering increased timeout or fallback options
    * Prepared for future enhancement with real-time tracking and status icons
+
+ [16th July 2025]
+   * Django Setup: Configured project, static/media files.
+   * User Auth: Email-enabled registration, login, password, profile forms.
+   * Templates/URLs: Linked views via clean templates and URL routing.
+   * Stripe Payments: Integrated gateway; added success/cancel pages.
+   * Testing: Debugged flows, verified functionality.
+   * Mailtrap: Set up email testing.
