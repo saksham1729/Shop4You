@@ -9,12 +9,19 @@ from django.contrib.auth import password_validation
 class CustomerRegistrationForm(UserCreationForm):
  password1 = forms.CharField(label='Password', widget=forms.PasswordInput(attrs={'class':'form-control'}))
  password2 = forms.CharField(label='Confirm Password (again)', widget=forms.PasswordInput(attrs={'class':'form-control'}))
- email = forms.CharField(required=True, widget=forms.EmailInput(attrs={'class':'form-control'}))
+ email = forms.EmailField(required=True)
  class Meta:
   model = User
   fields = ['username', 'email', 'password1', 'password2']
   labels = {'email': 'Email'}
   widgets = {'username':forms.TextInput(attrs={'class':'form-control'})}
+
+  def save(self, commit=True):
+        user = super().save(commit=False)
+        user.email = self.cleaned_data['email']
+        if commit:
+            user.save()
+        return user
 
 class LoginForm(AuthenticationForm):
  username = UsernameField(widget=forms.TextInput(attrs={'autofocus': True, 'class':'form-control'}))
