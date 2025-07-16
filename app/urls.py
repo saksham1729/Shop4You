@@ -1,7 +1,10 @@
 from django.urls import path
 from app import views
+from app.views import ProductView
 from django.conf import settings
 from django.conf.urls.static import static
+from .views import track_order
+from .views import chatbot_query
 from django.contrib.auth import views as auth_views
 from django.contrib.auth.views import LogoutView
 from .forms import LoginForm, MyPasswordChangeForm, MyPasswordResetForm, MySetPasswordForm
@@ -19,7 +22,8 @@ urlpatterns = [
     path('address/', views.address, name='address'),
     path('orders/', views.orders, name='orders'),
     path('paymentdone/?custid=5', views.payment_done, name='paymentdone'),
-    
+    path('', ProductView.as_view(), name='home'),
+    path('orders/<int:order_id>/track/', track_order, name='track-order'),
 
 
     path('mobile/', views.mobile, name='mobile'),
@@ -30,6 +34,9 @@ urlpatterns = [
 
     path('topwear/', views.topwear, name='topwear'),
     path('topwear/<slug:data>/', views.topwear, name='topweardata'),
+
+    path('bottomwear/', views.bottomwear, name='bottomwear'),
+    path('bottomwear/<slug:data>/', views.bottomwear, name='bottomweardata'),
 
 
     path('accounts/login/', auth_views.LoginView.as_view(template_name='app/login.html', authentication_form=LoginForm), name='login'),
@@ -44,5 +51,12 @@ urlpatterns = [
     path("password-reset-confirm/<uidb64>/<token>/", auth_views.PasswordResetConfirmView.as_view(template_name='app/password_reset_confirm.html', form_class=MySetPasswordForm), name="password_reset_confirm"),
     path("password-reset-complete/", auth_views.PasswordResetCompleteView.as_view(template_name='app/password_reset_complete.html'), name="password_reset_complete"),
 
-    path('registration/', views.CustomerRegistrationView.as_view(), name='customerregistration')
+    path('create-checkout-session/', views.create_checkout_session, name='create_checkout_session'),
+
+    path('payment-success/', views.paymentSuccess, name='payment-success'),
+    path('payment-cancel/', views.paymentCancel, name='payment-cancel'),
+    path('registration/', views.CustomerRegistrationView.as_view(), name='customerregistration'),
+
+    path('search/', views.search_products, name='search-products'),
+    path('api/chatbot/', chatbot_query, name='chatbot_query'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
