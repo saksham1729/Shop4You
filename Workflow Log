@@ -88,3 +88,11 @@ ABOVE ISSUES RESOLVED on 11th July, 2025.
    * Stripe Payments: Integrated gateway; added success/cancel pages.
    * Testing: Debugged flows, verified functionality.
    * Mailtrap: Set up email testing.
+
+[19 July 2025]
+
+   * Positioned chat window to float above the icon (bottom: 85px)
+   * Made header fixed inside chat (position: sticky)
+   * Enabled scrollable message area below header
+   * Styled input field with rounded design and focus effects
+   * Optimized CSS structure and ensured dark mode support
