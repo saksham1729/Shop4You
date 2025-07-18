@@ -595,11 +595,20 @@ def chatbot_query(request):
 genai.configure(api_key=settings.GENAI_API_KEY)
 
 def get_gemini_response(prompt):
+    if not prompt:
+        return "⚠️ Please enter a valid query."
+
     try:
-        model = genai.GenerativeModel("gemini-pro")
-        response = model.generate_content(prompt)
-        return response.text.strip()
+        model = genai.GenerativeModel("gemini-1.5-pro")
+        response = model.generate_content([{"text": prompt}])
+
+        if hasattr(response, 'text') and response.text:
+            return response.text.strip()
+        else:
+            return "🤖 Gemini didn't return a response. Try rephrasing your question."
     except Exception as e:
-        return "⚠️ Gemini couldn't process your request right now."
+        print("Gemini API error:", str(e))  # Log for debugging
+        return "⚠️ Gemini couldn't process your request right now. Try again later."
 
-
+import traceback
+print("Gemini API error:", traceback.format_exc())
