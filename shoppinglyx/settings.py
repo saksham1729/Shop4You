@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-cq9t+74035g2m^a51=l5jo$fox+u27r%^c-fxc_^2s&c3&#*zk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.ngrok.io', '.ngrok-free.app']
+
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # Application definition
@@ -37,8 +40,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'app',
 ]
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -48,6 +57,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
+
 ]
 
 ROOT_URLCONF = 'shoppinglyx.urls'
@@ -62,6 +73,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
             ],
         },
     },
@@ -124,5 +136,26 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 LOGIN_REDIRECT_URL = '/profile/'
 LOGOUT_REDIRECT_URL = '/login/'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 SESSION_ENGINE = "django.contrib.sessions.backends.db"
+STRIPE_PUBLIC_KEY = 'pk_test_51MSKwuJt5zQmaLLKF55rcWfZD1WBFk5SZxJ3Ac3YMrmTWLvcBQHHu585VfA9Ct4LervtabeIXF3BopyKnEyePqmL00HExW9E0h'
+STRIPE_SECRET_KEY = 'sk_test_51MSKwuJt5zQmaLLKYrpKdDKpB8mlxM6WbzXvuthSoDQD82SPS143H1G5r4qzKV3wTl2GYd4sReCfOEXEnqgwbWCF00OF6UHv5d'
+SITE_ID = 1
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.ngrok.io",
+    "https://*.ngrok-free.app"
+]
+
+
+# Looking to send emails in production? Check out our Email API/SMTP product!
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+EMAIL_HOST_USER = 'fbe3866b05ee88'
+EMAIL_HOST_PASSWORD = 'a537dfc534c8cd'
+EMAIL_PORT = '2525'
+
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'Shop4You <no-reply@shop4you.com>'
+
+
+GENAI_API_KEY = "AIzaSyA4gMRc17XYc40FmhqI28B8qh4DQTRnyhA"
