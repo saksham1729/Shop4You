@@ -175,7 +175,38 @@ body {
   border: none;
 }
 
-/* === BotUI Chat Styles === */
+/* === Floating Chat Window === */
+#botui-wrapper {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  bottom: 85px; /* freely floating near top */
+  right: 25px;
+  width: 350px;
+  max-height: 500px;
+  background: #fff;
+  border-radius: 10px;
+  z-index: 9999;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+/* === Fixed Header Inside Chat === */
+.botui-header {
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #007bff;
+  color: white;
+  padding: 10px 16px;
+  border-bottom: 1px solid #e5eef4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* === Chat App Container === */
 #botui-app {
   flex: 1;
   overflow-y: auto;
@@ -186,16 +217,10 @@ body {
   max-height: 50vh;
   height: auto;
   background: #f8fafd;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px #e0e0e0;
+  border-radius: 0 0 10px 10px;
 }
-#botui-wrapper {
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  max-height: 50vh;
-  overflow: hidden;
-}
+
+/* === Chat Message Structure === */
 .botui-app-container {
   display: flex;
   flex-direction: column;
@@ -313,4 +338,65 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  cursor:
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s, box-shadow 0.25s, transform 0.15s;
+  box-shadow: 0 2px 8px #dc354533;
+  outline: none;
+}
+#chat-close:hover,
+#chat-close:focus {
+  background: #a71d2a;
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px #dc354555;
+}
+
+
+/* === Dark Mode Fixes for Cart Page === */
+body.dark-mode .bg-white,
+body.dark-mode .bg-light {
+  background-color: #1f1f1f !important;
+}
+
+body.dark-mode .text-dark,
+body.dark-mode .text-muted {
+  color: #dcdcdc !important;
+}
+
+body.dark-mode .border-bottom {
+  border-color: #444 !important;
+}
+
+body.dark-mode .list-group-item {
+  background-color: transparent !important;
+  color: #dcdcdc !important;
+}
+
+body.dark-mode .btn-outline-danger {
+  color: #ff6b6b;
+  border-color: #ff6b6b;
+}
+body.dark-mode .btn-outline-danger:hover {
+  background-color: #ff6b6b;
+  color: #fff;
+}
+
+
+
+/* === Dark Mode Fixes for Orders Page === */
+body.dark-mode .bg-white,
+body.dark-mode .bg-light {
+  background-color: #1f1f1f !important;
+}
+
+body.dark-mode .text-dark,
+body.dark-mode .text-muted {
+  color: #dcdcdc !important;
+}
+
+body.dark-mode .order-card,
+body.dark-mode .order-summary {
+  background-color: #1f1f1f !important;
+  color: #dcdcdc !important;
+  border-color: #444 !important;
+}
