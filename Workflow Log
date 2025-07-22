@@ -89,10 +89,38 @@ ABOVE ISSUES RESOLVED on 11th July, 2025.
    * Testing: Debugged flows, verified functionality.
    * Mailtrap: Set up email testing.
 
-[19 July 2025]
+[17 July 2025]
 
    * Positioned chat window to float above the icon (bottom: 85px)
    * Made header fixed inside chat (position: sticky)
    * Enabled scrollable message area below header
    * Styled input field with rounded design and focus effects
    * Optimized CSS structure and ensured dark mode support
+
+[18th &  19th July 2025]
+    Learning about the different Recommendation System Model 
+    Built the Sentiment Analysis System to gain hands on practise of the logistisc regression Model and also LSTM.
+    Compared the accuracy of Logestic Regression, Decision Tree , SVM and Random forest Models.
+    
+
+
+[22 July 2025]
+✅ Recommendation System Fixes
+    Resolved Django error: Cannot create distinct fields once a slice has been taken
+    Refactored query to apply .distinct() before slicing and added .order_by('id')
+    Styled recommendation results with images, prices, and emojis in HTML format
+✅ Chatbot Frontend Integration
+    Enabled rich HTML rendering in BotUI via { type: 'html' }
+    Ensured <img> and <div> blocks display product visuals correctly
+    Helped update JavaScript to use innerHTML safely for rendering dynamic HTML
+✅ Rating Workflow for Ordered Products
+    Built a Django view submit_rating() that allows users to rate products they’ve purchased
+    Connected review form to orders page (orders.html) using conditional display logic
+    Restricted form to only show for 'Delivered' products
+✅ Dynamic Review Display Logic
+    Ensured review form is hidden once a user has rated the product
+    Fixed template issues with unsupported tags like .get() and .first()
+    Moved review lookup logic to the view: passed user_reviews dictionary to template
+✅ Custom Template Filter
+    Created a dict_get filter to safely access review objects in templates
+    Used {% load custom_tags %} to enable dictionary access for cleaner rendering
