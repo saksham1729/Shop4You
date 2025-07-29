@@ -98,9 +98,9 @@ ABOVE ISSUES RESOLVED on 11th July, 2025.
    * Optimized CSS structure and ensured dark mode support
 
 [18th &  19th July 2025]
-    Learning about the different Recommendation System Model 
-    Built the Sentiment Analysis System to gain hands on practise of the logistisc regression Model and also LSTM.
-    Compared the accuracy of Logestic Regression, Decision Tree , SVM and Random forest Models.
+   * Learning about the different Recommendation System Model 
+   * Built the Sentiment Analysis System to gain hands on practise of the logistisc regression Model and also LSTM.
+   * Compared the accuracy of Logestic Regression, Decision Tree , SVM and Random forest Models.
     
 
 
@@ -124,3 +124,45 @@ ABOVE ISSUES RESOLVED on 11th July, 2025.
 ✅ Custom Template Filter
     Created a dict_get filter to safely access review objects in templates
     Used {% load custom_tags %} to enable dictionary access for cleaner rendering
+
+[July 23] – Debugging and Dynamic Context Optimization
+
+    Identified rendering issues in Django views related to nested templates
+    Traced context leaks that caused incorrect variable propagation between views
+    Refactored view logic to streamline template context delivery
+    Verified rendering flow using test cases across different user scenarios
+
+[July 24] – Improving Review Logic & Delivery ETA Calculations
+
+    Audited user flow to locate loopholes allowing multiple review submissions
+    Implemented conditional logic in templates to suppress redundant review buttons
+    Enhanced Django backend ETA logic with dynamic thresholds based on location and package weight
+    Tested delivery estimate outputs across various mock orders for accuracy
+
+[July 25] – Model Retraining and Validation
+
+    Aggregated user interaction data from the past week for model input enrichment
+    Retrained collaborative filtering-based recommendation model with fresh ratings
+    Evaluated precision and recall of recommendations after retraining
+    Logged model versioning and performance metrics for rollback safety
+
+[July 26] – Dependency Conflict Resolution
+
+    Investigated deep dependency collisions between TensorFlow 2.x, scikit-learn, and NumPy
+    Isolated conflicting submodules and created virtual environments for segmented testing
+    Patched broken imports and resolved pip installation failures using constraint files
+    Documented compatibility matrix for future reference and onboarding
+
+[July 27] – Modular Workflow Evaluation
+
+    Split large monolithic components into modular Django apps with isolated responsibilities
+    Benchmarked API response times after workflow segmentation
+    Ran load tests on collaborative filtering algorithms using altered rating distribution
+    Tweaked fallback recommendation logic to handle cold-start scenarios
+
+[July 28] – Deployment & Documentation
+
+    Deployed updated Streamlit applications for internal UX review
+    Integrated dynamic delivery logic visualizations into the dashboard
+    Drafted technical documentation for context management, model integration, and delivery workflows
+    Prepared a team sync summary to highlight architectural changes and model enhancements
