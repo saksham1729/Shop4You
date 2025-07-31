@@ -201,3 +201,23 @@ ABOVE ISSUES RESOLVED on 11th July, 2025.
     Improved user-centric features:
         Boosted ETA calculation accuracy for delivery workflows.
         Monitored user engagement and click-through trends for evolving feedback loops.
+
+
+[30 July 2025]
+
+    Completed debugging of OTP registration flow using Twilio Verify and session-based fallback
+    Refactored broken view logic with multiple post methods into a unified class-based view
+    Implemented uniqueness checks for username, email, and phone
+    Designed initial test cases to mock OTP verification and simulate user registration
+    Resolved broken pipe errors related to excessive static asset requests
+    Debugged fallback image rendering for products missing media
+    Began integration of recommendation system with basic error handling for user context
+
+
+[31 July 2025]
+
+    Implemented 3-stage OTP-based registration flow with manual Twilio SMS logic
+    Updated forms.py and refactored views using stage control
+    Reworked template for progressive form rendering
+    Resolved key bugs: form import, model fields, null checks, navbar alignment
+
