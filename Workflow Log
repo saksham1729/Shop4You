@@ -221,3 +221,23 @@ ABOVE ISSUES RESOLVED on 11th July, 2025.
     Reworked template for progressive form rendering
     Resolved key bugs: form import, model fields, null checks, navbar alignment
 
+
+[August 4, 2025]
+ Virtual Try-On Integration Planning
+
+    Analyzed the full architecture of the AI shopping assistant:
+        IDM-VTON model hosted via Hugging Face Space.
+        Gradio MCP server setup with vton_generation tool.
+        VS Code AI Chat configuration using mcp.json.
+
+Website Implementation Strategy
+
+    Mapped out how to integrate the virtual try-on flow into a Django e-commerce platform.
+    Designed:
+        Frontend UI for image and garment upload.
+        Backend view to invoke the MCP server and display try-on results.
+
+Referenced Technical Documentation
+    Incorporated the official Gradio MCP + IDM-VTON blog post to validate implementation steps.
+    Adapted configurations for deployment readiness and public access.
+
