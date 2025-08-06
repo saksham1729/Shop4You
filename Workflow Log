@@ -241,3 +241,27 @@ Referenced Technical Documentation
     Incorporated the official Gradio MCP + IDM-VTON blog post to validate implementation steps.
     Adapted configurations for deployment readiness and public access.
 
+
+
+ [6 August 2025]
+
+1. Lottie Animations Integration
+
+Added Lottie SVG animations (truck, financial report, payment success) to various pages.
+Ensured correct placement and sizing (e.g., right of map, centered in success page).
+Fixed issues with duplicate and missing icons by correcting template structure and script usage.
+2. Expense Tracker Feature
+
+Implemented an expense tracker page using the OrderPlaced model.
+Enabled period selection (daily, weekly, monthly) with a dropdown.
+Filtered purchases and calculated totals for each period.
+Passed product names and prices to the template for visualization.
+3. Chart Visualization
+
+Used Chart.js to display a bar graph showing the relationship between product names and their costs for the selected period.
+Ensured the graph updates dynamically based on the period selected.
+4. Template/UI Improvements
+
+Centered Lottie and other elements using Bootstrap flex utilities.
+Adjusted navbar to display "Expense Track" in a single line with a small font.
+Added a total row to the expense table.
