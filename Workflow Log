@@ -241,7 +241,11 @@ Referenced Technical Documentation
     Incorporated the official Gradio MCP + IDM-VTON blog post to validate implementation steps.
     Adapted configurations for deployment readiness and public access.
 
+[5 August 2025]
 
+ Data Preprocessing
+ Categorizing the products 
+ Home Page Slider Animation
 
  [6 August 2025]
 
@@ -265,3 +269,11 @@ Ensured the graph updates dynamically based on the period selected.
 Centered Lottie and other elements using Bootstrap flex utilities.
 Adjusted navbar to display "Expense Track" in a single line with a small font.
 Added a total row to the expense table.
+
+[7 August 2025]
+
+    🔧 Search Fix: Updated search_products view to handle missing product_image by falling back to img_link or default image.
+
+    🖼️ Zoom Feature: Implemented square lens zoom-on-hover using natural image dimensions and clamped lens movement.
+
+    🧪 UI Debugging: Ensured correct image rendering in productdetail.html; refined CSS for .zoom-result.
