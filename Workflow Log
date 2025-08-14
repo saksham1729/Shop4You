@@ -277,3 +277,43 @@ Added a total row to the expense table.
     🖼️ Zoom Feature: Implemented square lens zoom-on-hover using natural image dimensions and clamped lens movement.
 
     🧪 UI Debugging: Ensured correct image rendering in productdetail.html; refined CSS for .zoom-result.
+
+
+[8 August 2025]
+
+    Researched about the Mediapipe and OpenPose Models for Size measurement using the user's image and Height.
+
+[11 August 2025]
+
+    
+    Compared the results of the both models mediapipe and openpose while testing in the google colab, and decided to go with the mediapipe model.
+
+[12 August 2025]
+
+    
+    Implemented the Mediapipe with the Django E-commerce Project.
+
+[13 August 2025]
+
+   To take it one level up which will  improve its accuracy , landmarks --> world landmarks and also researched about the DensePose,TFIuHD for 3D Mesh representation.
+
+[14 August 2025]
+
+    ✅ Integrated PIFuHD mesh generation into Django pipeline
+
+    🧠 Refactored recon.py for PyTorch 2.8 compatibility (add_safe_globals)
+
+    🔧 Fixed environment mismatch and subprocess execution using sys.executable
+
+    🧱 Resolved Unicode errors in terminal output (emoji-safe logging)
+
+    🧩 Updated EvalWPoseDataset to support single-image mode with keypoints
+
+    🛠️ Patched missing crop functions (face_crop, upperbody_crop, fullbody_crop)
+
+    📂 Created keypoints_generator.py using MediaPipe for auto keypoint extraction
+
+    🔄 Integrated keypoint generation fallback into recommend_size_view
+
+    🧪 Validated measurement extraction and mesh generation end-to-end
+  
