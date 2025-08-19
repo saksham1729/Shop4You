@@ -316,4 +316,12 @@ Added a total row to the expense table.
     🔄 Integrated keypoint generation fallback into recommend_size_view
 
     🧪 Validated measurement extraction and mesh generation end-to-end
+
+[18 August 2025]
+
+    Refactored mesh generation pipeline to dynamically locate .obj output files and handle missing keys gracefully.
+    Debugged input folder preparation for PIFuHD, ensuring all required files (.jpg, .json, *_rect.txt) were present and correctly named.
+    Validated ICON mesh outputs against MediaPipe world landmarks for hybrid measurement extraction.
+    Logged and compared measurement outputs to assess anatomical accuracy and completeness.
+    Identified causes of incomplete .obj files — bounding box misalignment and low-quality inputs — and planned fallback logic.
   
