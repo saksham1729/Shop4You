@@ -5,7 +5,7 @@ Shop4You is a full-stack e-commerce web application built using Django, offering
 
   🔐 User Authentication: Register, login, and secure password management
 
-  📧 Email OTP Verification: OTP sent to email during registration
+  📧 Phone Number OTP Verification: OTP sent to phone number during registration
 
   🛒 Shopping Cart: Add, update, and remove products from the cart
 
