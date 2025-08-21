@@ -327,6 +327,21 @@ Added a total row to the expense table.
 
 [19 Aug 2025]
 
+   Extracted MediaPipe 3D landmarks and scaled to real-world dimensions.
+   Mapped to SMPL-X joints and injected pose into ICON pipeline.
+   Generated anatomically accurate .obj mesh via ICON.
+   Validated pose vs mesh-based measurements; ICON reflects true pose, unlike silhouette-based PIFuHD.
+
+[20 Aug 2025]
+
+    Refined YouTube <iframe> embed to autoplay, hide controls, and stretch full width.
+    Added responsive container with flexbox centering and max-width constraint.
+    Enabled continuous looping via loop=1 and playlist parameter.
+    Verified layout integrity and playback behavior across devices.
+    Patched recon.py to dynamically locate .obj output and handle missing keys with fallback logic.
+    Validated ICON mesh outputs against MediaPipe world landmarks for hybrid measurement extraction.
+    Integrated SMIS pipeline for virtual try-on simulation; planned Django backend wiring.
+   
 
 [August 21, 2025]
 
