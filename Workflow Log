@@ -97,7 +97,7 @@ ABOVE ISSUES RESOLVED on 11th July, 2025.
    * Styled input field with rounded design and focus effects
    * Optimized CSS structure and ensured dark mode support
 
-[18th &  19th July 2025]
+[18th &  21st July 2025]
    * Learning about the different Recommendation System Model 
    * Built the Sentiment Analysis System to gain hands on practise of the logistisc regression Model and also LSTM.
    * Compared the accuracy of Logestic Regression, Decision Tree , SVM and Random forest Models.
@@ -351,4 +351,21 @@ Added a total row to the expense table.
     Debugged and resolved UnboundLocalError in recon.py and replace() type mismatch in views.py.
     Confirmed .obj file accessibility and validity via browser and Blender.
     Enhanced recommend_size.html with responsive 
+
+[August 22nd, 2025]
+
+    Improve anatomical measurement accuracy from 3D mesh generated via PIFuHD by transitioning from fixed-ratio slicing to landmark-based slicing.
+
+   Identified limitations in fixed Y-axis slicing for shoulder, chest, waist, and hip widths.
+   Selected landmark-based slicing using MediaPipe’s 3D world landmarks for anatomical precision.
+   Extracted key pose landmarks (LEFT_SHOULDER, RIGHT_SHOULDER, LEFT_HIP, RIGHT_HIP) from input image.
+   Computed slicing planes from landmark pairs and applied them to .obj mesh using trimesh.section().
+   Measured cross-sectional widths from planar slices and validated against expected anatomical zones.
+   Outlined modular backend structure with landmarks.py, slicing.py, and Django integration.
+
+[August 25th, 2025]
+
+  Learning Augmented Reality Implementation with python.
+
+
   
